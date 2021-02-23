@@ -1,0 +1,991 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url("https://candyfonts.com/wp-data/2019/03/18/37874/PlayfairDisplaySC-Regular.ttf")
+      format("woff"),
+    url("https://candyfonts.com/wp-data/2019/03/18/37874/PlayfairDisplaySC-Regular.ttf")
+      format("opentype"),
+    url("https://candyfonts.com/wp-data/2019/03/18/37874/PlayfairDisplaySC-Regular.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Post No Bills Jaffna";
+  src: url("https://candyfonts.com/wp-data/2019/03/05/28056/PostNoBillsJaffna-Bold.ttf")
+      format("woff"),
+    url("https://candyfonts.com/wp-data/2019/03/05/28056/PostNoBillsJaffna-Bold.ttf")
+      format("opentype"),
+    url("https://candyfonts.com/wp-data/2019/03/05/28056/PostNoBillsJaffna-Bold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("https://candyfonts.com/wp-data/2018/10/11/6120/PTS55F.ttf")
+      format("woff"),
+    url("https://candyfonts.com/wp-data/2018/10/11/6120/PTS55F.ttf")
+      format("opentype"),
+    url("https://candyfonts.com/wp-data/2018/10/11/6120/PTS55F.ttf")
+      format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.mid-countainer {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0 30px;
+}
+
+.container {
+  width: 100%;
+}
+
+.title {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 60px);
+  bottom: 0;
+  width: 120px;
+  border-bottom: #ffffff 1px solid;
+}
+
+.wrapper {
+  position: relative;
+  background-color: black;
+  color: white;
+  font-family: "PT Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.top-line {
+  display: flex;
+  justify-content: center;
+  color: gray;
+  font-size: 12px;
+  padding: 14px 0;
+}
+
+.hat-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hat-info {
+  display: flex;
+  align-items: center;
+  margin: 0 -10px;
+}
+
+.top-element {
+  position: relative;
+  padding: 0 10px;
+}
+
+.top-element:nth-child(n + 2)::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 0;
+  height: 12px;
+  border-left: gray 1px solid;
+}
+
+.phone {
+  display: flex;
+}
+
+.phone-img {
+  width: 16px;
+  height: 16px;
+}
+
+.phone-number {
+  margin-left: 15px;
+}
+
+.hat-login {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  display: flex;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.login-btn:hover {
+  color: white;
+  fill: white;
+}
+
+.login-button-icon {
+  width: 14px;
+  height: 14px;
+  fill: gray;
+  transition: fill 0.3s ease;
+}
+
+.login-btn:hover .login-button-icon {
+  fill: white;
+}
+
+.login-btn-text {
+  margin-left: 10px;
+}
+
+.header {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0f0f0f;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -20px;
+}
+
+.header-logo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Post No Bills Jaffna";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 54px;
+  user-select: none;
+  cursor: pointer;
+  margin-left: -20px;
+}
+
+.header-logo-link {
+  padding: 0 20px;
+}
+
+.header-menu {
+  display: flex;
+  margin-right: -20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #969696;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item-icon {
+  box-sizing: content-box;
+  width: 22px;
+  height: 22px;
+  margin-left: 20px;
+}
+
+.menu-item-icon:nth-child(n + 5) {
+  margin-left: 0;
+}
+
+.menu-button {
+  display: none;
+  position: relative;
+}
+
+.menu-button-content {
+  position: relative;
+  width: 22px;
+  height: 22px;
+}
+
+.menu-button-top {
+  content: "";
+  position: absolute;
+  top: calc(0% + 2px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform-origin: center center;
+}
+
+.menu-button.pressed .menu-button-top {
+  animation-name: MenuBtnTopAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.menu-button.unpressed .menu-button-top {
+  animation-name: MenuBtnTopAnimationBack;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+.menu-button-middle {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.menu-button.pressed .menu-button-middle {
+  animation-name: MenuBtnMiddleAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.menu-button.unpressed .menu-button-middle {
+  animation-name: MenuBtnMiddleAnimationBack;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+.menu-button-bottom {
+  content: "";
+  position: absolute;
+  bottom: calc(0% + 2px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.menu-button.pressed .menu-button-bottom {
+  animation-name: MenuBtnBottomAnimation;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.menu-button.unpressed .menu-button-bottom {
+  animation-name: MenuBtnBottomAnimationBack;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  display: none;
+  visibility: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #0f0f0fea;
+  color: rgb(218, 218, 218);
+  font-family: "PT Sans";
+  padding: 85px 0 65px 0;
+  overflow-y: scroll;
+  transition: left 0.4s ease, visibility 0.4s ease;
+}
+
+.menu a {
+  color: rgb(218, 218, 218);
+}
+
+.menu.show {
+  visibility: visible;
+  left: 0;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 0;
+}
+
+.menu-login {
+  display: flex;
+}
+
+.menu-login-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+}
+
+.menu-login-text {
+  line-height: 24px;
+}
+
+.menu-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-phone {
+  display: flex;
+  align-items: center;
+}
+
+.menu-bottom-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.menu-number {
+  margin-left: 5px;
+}
+
+.menu-work-days {
+  margin-top: 6px;
+}
+
+.menu-work-hours {
+  margin-top: 6px;
+}
+
+.content {
+}
+
+.main-screen {
+  position: relative;
+}
+
+.main-screen-container {
+  padding: 160px 20px;
+}
+
+.main-screen-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/main-bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.main-screen-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f;
+  opacity: 0.5;
+}
+
+.main-screen-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-screen-logo {
+  max-width: 320px;
+  max-height: 320px;
+}
+
+.main-screen-text {
+  max-width: 730px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 150%;
+  margin-top: 80px;
+}
+
+.collections {
+}
+
+.collections-btn {
+  position: relative;
+  padding: 12px 28px;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  border: white 1px solid;
+  background-color: transparent;
+  transition: color 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+.collections-btn:hover {
+  color: rgb(78, 78, 78);
+  background-color: white;
+}
+
+.collections-btn:active {
+  color: rgb(51, 51, 51);
+  background-color: rgb(175, 175, 175);
+  border: rgb(175, 175, 175) 1px solid;
+}
+
+.collections-background {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.collections-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f80;
+}
+
+.collections-large-block {
+  flex: 1030px 0 0;
+}
+
+.collections-small-block {
+  flex: 400px 1 1;
+}
+
+.collections-row {
+  display: flex;
+}
+
+.new-season {
+  padding: 88px 55px;
+}
+
+.new-season-title {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
+
+.new-season-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+
+.card-picture-block {
+  display: flex;
+  width: 260px;
+  height: 325px;
+  justify-content: center;
+  align-items: center;
+  background-color: #191b1c;
+}
+
+.card-picture {
+  width: 215px;
+  height: 214px;
+}
+
+.card-name {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 25px;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+.newest-collection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.newest-collection-background {
+  background-image: url("../img/new-collection.png");
+}
+
+.newest-collection-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 30px;
+}
+
+.newest-collection-title {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.suit {
+  position: relative;
+}
+
+.suit-background {
+  background-image: url("../img/collection-image.png");
+  background-position-x: center;
+}
+
+.prev-collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.prev-collection-title {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+
+.prev-collection-text {
+  max-width: 470px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.prev-collection-btn {
+  margin-top: 61px;
+}
+
+.new-items {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0 110px 0;
+}
+
+.new-items-title {
+  padding-bottom: 40px;
+}
+
+.new-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 81px;
+}
+
+.new-items-list.slider {
+  display: block;
+}
+
+.new-items-list .card {
+  margin-bottom: 40px;
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  padding: 60px 50px;
+  background-color: #0f0f0f;
+}
+
+.brands-title {
+  padding-bottom: 40px;
+}
+
+.brands-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.brand-logo {
+  width: 255px;
+  height: 94px;
+}
+
+.bottom {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 80px 0 100px 0;
+}
+
+.bottom-background {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bottom-bg.png");
+  background-position: center;
+}
+
+.bottom-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f;
+  opacity: 0.85;
+}
+
+.bottom-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-about,
+.bottom-categories,
+.bottom-mailing {
+  flex: 32% 0 0;
+}
+
+.bottom-title {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.bottom-text {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.bottom-categories-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.bottom-category {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 150%;
+  background-color: #0f0f0f;
+  color: #d0d0d0;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-category:hover {
+  background-color: #262626;
+}
+
+.mailing-form {
+  margin-top: 37px;
+}
+
+.mailing-form {
+  display: flex;
+}
+
+.mailing-form-mail-input {
+  padding: 10px 15px;
+  color: #e7e7e7;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "PT Sans";
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  flex: 200px 1 1;
+}
+
+.mailing-form-mail-input::placeholder {
+  color: #e7e7e7;
+  font-size: 14px;
+  line-height: 150%;
+  font-family: "PT Sans";
+}
+
+.mailing-form-submit {
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #0f0f0f;
+  border: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: "PT Sans";
+  font-weight: normal;
+}
+
+.mailing-form-submit:hover {
+  background-color: #262626;
+}
+
+.mailing-form-submit:active {
+  color: rgb(197, 197, 197);
+  background-color: #3a3a3a;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 17px 0;
+  background-color: #0f0f0f;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 16px;
+  color: #d0d0d0;
+}
+
+.footer-source {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  color: #d0d0d0;
+}
+
+.footer-source::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: #d0d0d080 1px solid;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+}
+
+.slider .card {
+  margin: 0 16px;
+}
+
+.card-picture-block {
+  display: flex;
+  width: 260px;
+  height: 325px;
+  justify-content: center;
+  align-items: center;
+  background-color: #191b1c;
+  user-select: none;
+}
+
+.card-picture {
+  width: 215px;
+  height: 214px;
+  user-select: none;
+}
+
+.card-name {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 25px;
+}
+
+.card-price {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .collections-small-block {
+    flex: 35% 1 1;
+  }
+
+  .collections-large-block {
+    flex: 65% 1 1;
+  }
+
+  .new-season {
+    padding: 60px 30px;
+  }
+
+  .card-picture-block {
+    width: 234px;
+    height: 293px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .menu-item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .collections-row {
+    flex-direction: column;
+  }
+
+  .collections-row_second {
+    flex-direction: column-reverse;
+  }
+
+  .collections-bg {
+    background-size: cover;
+  }
+
+  .collections-small-block {
+    min-height: 620px;
+  }
+
+  .new-season-list {
+    justify-content: center;
+    margin: 0 -25px;
+  }
+
+  .new-season-list .card {
+    margin: 0 25px;
+  }
+
+  .brands-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .brand {
+    flex-basis: 45%;
+    display: flex;
+  }
+
+  .brand:nth-child(2n + 1) {
+    justify-content: flex-end;
+  }
+
+  .new-items {
+    padding: 70px 0 55px 0;
+  }
+
+  .new-items-list {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .bottom {
+    padding: 50px 0;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-item {
+    max-width: 600px;
+    margin: 35px 0;
+    flex: auto;
+  }
+
+  .bottom-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-line {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu-item-icon {
+    margin-left: 0;
+  }
+
+  .menu-item-text {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .main-screen-container {
+    padding: 95px 20px;
+  }
+
+  .card-name,
+  .card-price {
+    text-align: center;
+  }
+
+  .brands {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .brands-list {
+    justify-content: center;
+  }
+
+  .bottom-text {
+    text-align: center;
+  }
+
+  .bottom-categories-list {
+    justify-content: center;
+  }
+}
