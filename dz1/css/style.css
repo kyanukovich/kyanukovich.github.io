@@ -295,41 +295,6 @@ a {
   padding: 12px 32px;
   margin: 60px 0 0 0;
 }
-.collection-wrap {
-  background: #000;
-}
-.collection {
-  min-height: 1290px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-}
-.collection h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 48px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.collection span {
-  width: 120px;
-  height: 1px;
-  background: #fff;
-  margin: 40px 0 80px;
-}
-.collection .samples {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.collection .sample {
-  margin: 0 7px 120px;
-}
 .brands-wrap {
   background: #0f0f0f;
 }
@@ -464,6 +429,179 @@ a {
   line-height: 16px;
   color: #d0d0d0;
 }
+.new_arrivals {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.new_arrivals_watch_container {
+  max-width: 1180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new_arrivals_text {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.new_arrivals_line {
+  width: 120px;
+  height: 0px;
+  left: 900px;
+  top: 2472px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  margin-top: 40px;
+}
+
+.new_arrivals_watch {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.watch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.watch_pic_image_box {
+  background-color: #191b1c;
+  padding: 20px 0px;
+}
+
+.watch_pic_image_box_text {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.watch_pic_image_box_text_spn {
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #d0d0d0;
+  text-align: center;
+}
+.watch_pic_image {
+  width: 260px;
+  height: 405px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.slider_2 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: none;
+  background-color: #000000;
+}
+
+.slider__wrapper_2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slider__item_2 {
+  max-height: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.slider__control_2 {
+  position: absolute;
+  top: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  height: 50px;
+  transform: translateY(-50%);
+  /* background: #ffffff1c; */
+}
+
+.slider__control_show_2 {
+  display: flex;
+}
+
+.slider__control_2:hover,
+.slider__control_2:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  opacity: 0.9;
+}
+
+.slider__control_left_2 {
+  left: 0;
+}
+
+.slider__control_right_2 {
+  right: 0;
+}
+
+.slider__control_2::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.slider__control_left_2::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.slider__control_right_2::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.slider__item_2 > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
 @media (max-width: 1440px) {
   .catalogue {
     flex-wrap: wrap;
@@ -493,20 +631,15 @@ a {
   .previous-collection-about a {
     margin: 40px 0;
   }
-  .collection .sample {
-    margin: 0 10px 60px;
-  }
   .brand_labels {
     flex-wrap: wrap;
   }
   .watches,
   .catalogue-link {
     width: 100%;
+  }
 }
 @media (max-width: 768px) {
-  body.lock {
-    overflow: hidden;
-  }
   .topline .info,
   .topline .login {
     z-index: 2;
@@ -557,19 +690,6 @@ a {
   .navbar__burger:after {
     bottom: 0;
   }
-  .navbar__burger.open span {
-    transform: scale(0);
-  }
-  .navbar__burger.open:before {
-    transform: rotate(-45deg);
-    top: 7px;
-    transition: all 0.3s;
-  }
-  .navbar__burger.open:after {
-    transform: rotate(45deg);
-    bottom: 7px;
-    transition: all 0.3s;
-  }
   .menu {
     position: fixed;
     width: 100%;
@@ -581,11 +701,6 @@ a {
     opacity: 0;
     transition: all 0.5s;
     z-index: -1;
-  }
-  .menu.open {
-    transform: translatex(0);
-    opacity: 0.93;
-    z-index: 1;
   }
   .menu-list {
     display: flex;
@@ -646,18 +761,6 @@ a {
   .previous-collection-about a {
     margin: 25px 0;
   }
-  .collection {
-    min-height: 1024px;
-  }
-  .collection h2 {
-    padding: 10px 0 0;
-  }
-  .collection span {
-    margin: 20px 0 40px;
-  }
-  .collection .name {
-    margin: 10px 0 5px;
-  }
   .shop {
     flex-wrap: wrap;
   }
@@ -674,9 +777,6 @@ a {
   }
   .previous-collection-about a {
     margin: 16px 0;
-  }
-  .collection .sample {
-    margin: 0 10px 30px;
   }
   .brands h2 {
     padding-top: 40px;
@@ -696,5 +796,23 @@ a {
   }
   .shop-mailing button {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .new_arrivals_watch_container {
+    display: none;
+  }
+
+  .slider_2 {
+    display: flex;
+  }
+
+  .new_arrivals {
+    padding: 0px;
   }
 }
