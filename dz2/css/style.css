@@ -887,11 +887,6 @@
          margin: 0 auto;
     }
 }
- @media (min-width: 992px) {
-     .performances {
-         margin-left: 40px;
-    }
-}
  .performances__title {
      width: 100%;
      padding: 0px 33px;
