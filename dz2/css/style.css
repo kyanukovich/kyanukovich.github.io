@@ -331,6 +331,10 @@ body {
     top: auto;
     bottom: 0px;
   }
+  .icon-menu._active {
+    opacity: 0;
+    overflow: hidden;
+  }
 }
 
 .menu__body {
@@ -347,7 +351,12 @@ body {
   width: 300px;
   min-height: 100vh;
 }
-
+.menu__body._active {
+  overflow: auto;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
 .inner {
   display: -ms-grid;
   display: grid;
